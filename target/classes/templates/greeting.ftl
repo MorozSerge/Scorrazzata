@@ -2,7 +2,7 @@
 
 <@c.page>
 <h5>Hello there</h5>
-<div>Just trying to learn java</div>
+<div>Let's become better together with our community</div>
 
 
 </@c.page>
