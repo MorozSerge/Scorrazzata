@@ -7,7 +7,6 @@ import com.example.proj.repos.UserRepo;
 import com.example.proj.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.boot.context.properties.bind.DefaultValue;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
@@ -29,7 +28,6 @@ import java.io.IOException;
 import java.util.*;
 
 import static java.lang.Math.*;
-import static java.lang.Math.acos;
 
 @Controller
 public class MainController {
@@ -209,7 +207,7 @@ public class MainController {
 
         model.addAttribute("messages", messages);
 
-        return "message";
+        return "redirect:/message";
     }
 
 }
