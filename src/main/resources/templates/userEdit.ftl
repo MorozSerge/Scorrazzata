@@ -3,8 +3,9 @@
 <@c.page>
 User editor
 
+<h5>${user.username}</h5>
+
 <form action="/user" method="post">
-    <input type="text" name="username" value="${user.username}">
     <div>Activation:<input type="checkbox" class="m-1" name ="active" value="true" ${user.active?string("checked", "")}></div>
 
     <#list roles as role>

@@ -95,8 +95,8 @@ public class UserService implements UserDetailsService {
         return userList;
     }
 
-    public void saveUser(User user, String username, Map<String, String> form, boolean active) {
-        user.setUsername(username);
+    public void saveUser(User user, Map<String, String> form, boolean active) {
+
         Set<String> roles = Arrays.stream(Role.values())
                 .map(Role::name)
                 .collect(Collectors.toSet());

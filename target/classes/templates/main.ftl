@@ -26,7 +26,7 @@ display: none;
         <div id="map"></div>
         <pre id="coordinates" class="coordinates"></pre>
         <input type="hidden" name="_csrf" value="${_csrf.token}" />
-        <button type="submit" class="btn btn-primary" name="set" value="true">Set</button>
+        <button type="submit" class="btn btn-primary mt-5 mb-2" name="set" value="true">Set</button>
     </form>
 </div>
 
@@ -37,14 +37,14 @@ var coordinates = document.getElementById('coordinates');
 var map = new mapboxgl.Map({
 container: 'map',
 style: 'mapbox://styles/mapbox/streets-v11',
-center: [30.32, 59.93],
+center: [${user.getLon()?c},${user.getLat()?c}],
 zoom: 9
 });
 
 var marker = new mapboxgl.Marker({
 draggable: true
 })
-.setLngLat([30.32, 59.93])
+.setLngLat([${user.getLon()?c},${user.getLat()?c}])
 .addTo(map);
 
 function onDragEnd() {
@@ -58,6 +58,7 @@ marker.on('dragend', onDragEnd);
 
 
 <#if users??>
+<h5>Runners found nearby:</h5>
 <div class="card-columns" >
     <#list users as user>
     <div class="card my-3" >
@@ -76,7 +77,7 @@ marker.on('dragend', onDragEnd);
 
 <form method="post">
     <div>
-        <label for="customRange2">Find in range</label>
+        <label for="customRange2">Find in range(from 100m to 2500m):</label>
         <input type="range" class="custom-range" min="100" max="2500" name ="some" step="50" id="customRange2">
         <input type="hidden" name="_csrf" value="${_csrf.token}" />
         <button type="submit" class="btn btn-primary">Find</button>

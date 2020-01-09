@@ -37,12 +37,12 @@ public class UserController {
     @PreAuthorize("hasAuthority('ADMIN')")
     @PostMapping
     public String userSave(
-            @RequestParam String username,
+
             @RequestParam Map<String, String> form,
             @RequestParam("userId")User user,
             @RequestParam(defaultValue = "false") boolean active) {
 
-        userService.saveUser(user, username, form, active);
+        userService.saveUser(user, form, active);
         return "redirect:/user";
     }
 
@@ -62,7 +62,7 @@ public class UserController {
     ){
         userService.updateProfile(user, password, email);
 
-        return "/redirect:/user/profile";
+        return "redirect:/user/profile";
     }
 
 }
