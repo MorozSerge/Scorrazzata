@@ -140,7 +140,7 @@ public class MainController {
             @RequestParam("id") Message message,
             @RequestParam("text") String text,
             @RequestParam("tag") String tag,
-            @RequestParam("file") MultipartFile file
+            @RequestParam(name = "file", required = false) MultipartFile file
     ) throws IOException {
         if (message.getAuthor().equals(currentUser)) {
             if (!StringUtils.isEmpty(text)) {
@@ -186,7 +186,7 @@ public class MainController {
             @Valid Message message,
             BindingResult bindingResult,
             Model model,
-            @RequestParam("file") MultipartFile file
+            @RequestParam(name = "file", required = false) MultipartFile file
     ) throws IOException {
         message.setAuthor(user);
 
