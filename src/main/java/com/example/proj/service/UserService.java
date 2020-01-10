@@ -22,8 +22,6 @@ public class UserService implements UserDetailsService {
     @Autowired
     private UserRepo userRepo;
 
-    @Autowired
-    private PasswordEncoder passwordEncoder;
 
     @Autowired
     private MailSender mailSender;
@@ -47,7 +45,6 @@ public class UserService implements UserDetailsService {
          user.setActive(false);
          user.setRoles(Collections.singleton(Role.USER));
          user.setActivationCode(UUID.randomUUID().toString());
-         user.setPassword(passwordEncoder.encode(user.getPassword()));
          user.setLat(59.93);
          user.setLon(30.32);
          userRepo.save(user);
@@ -62,7 +59,7 @@ public class UserService implements UserDetailsService {
         if (!StringUtils.isEmpty(user.getEmail())){
             String message = String.format(
                     "Hello, %s! \n" +
-                            "Welcome to proj. Please visit next link: http://localhost:8080/activate/%s",
+                            "Welcome to proj. Please visit next link: https://scorrazzata.herokuapp.com/activate/%s",
                     user.getUsername(),
                     user.getActivationCode()
             );
@@ -122,7 +119,7 @@ public class UserService implements UserDetailsService {
             }
         }
         if (!StringUtils.isEmpty(password))
-            user.setPassword(passwordEncoder.encode(password));
+            user.setPassword(password);
     userRepo.save(user);
     if(isEmailChanged)
         sendMessage(user);

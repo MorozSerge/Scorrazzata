@@ -1,1 +1,0 @@
-alter table message add reciever_id bigint;
