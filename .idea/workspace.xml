@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f5271a6d-94b9-4d43-af56-d662fc8f9e2c" name="Default Changelist" comment="update" />
+    <list default="true" id="f5271a6d-94b9-4d43-af56-d662fc8f9e2c" name="Default Changelist" comment="update">
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+    </list>
     <list id="a572000f-a684-43a1-bd41-95916145d455" name="new" comment="" />
     <list id="a506296e-50ba-43fd-8209-e369b2c14a16" name="update" comment="update">
       <changelist_data name="MorozSerge" email="43163413+morozserge@users.noreply.github.com" date="1578620084000" />
@@ -22,8 +24,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="20" lean-forward="true" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
+            <state relative-caret-position="374">
+              <caret line="22" column="19" lean-forward="true" selection-start-line="22" selection-start-column="19" selection-end-line="22" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -431,12 +433,12 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3286119" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.20254958" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.49731544" visible="true" weight="0.05240793" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.49731544" visible="true" weight="0.22096318" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3286119" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.14022663" />
-      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5026846" side_tool="true" weight="0.66572237" />
+      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5026846" side_tool="true" visible="true" weight="0.22096318" />
       <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.49731544" weight="0.32719547" />
       <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.4986577" weight="0.3286119" />
       <window_info anchor="bottom" id="Console" order="11" />
@@ -852,8 +854,8 @@
     <entry file="file://$PROJECT_DIR$/src/main/resources/application-dev.properties" />
     <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="20" lean-forward="true" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
+        <state relative-caret-position="374">
+          <caret line="22" column="19" lean-forward="true" selection-start-line="22" selection-start-column="19" selection-end-line="22" selection-end-column="19" />
         </state>
       </provider>
     </entry>
